@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+p + p {
+    color: tomato;
+}
+
+.hermano > span {
+    color: rebeccapurple;
+}
+
+div span {
+    font-weight: bold;
+}
+
+div ~ div {
+    color: teal;
+}
