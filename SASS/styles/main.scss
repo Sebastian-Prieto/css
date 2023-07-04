@@ -1,0 +1,38 @@
+@use "base.scss";
+
+main {
+    padding: 20px;
+}
+
+$color-main: #dc2626;
+
+@mixin center($alto, $ancho) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $ancho;
+    height: $alto;
+}
+
+.button {
+    background: $color-main;
+    color: #eee;
+    padding: 16px 64px;
+    border: none;
+    border-radius: 8px;
+
+    @include center(200px, 50px);
+
+    @if $color-main == #dc2626 {
+        &:hover {
+            background: salmon;
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .text-#{$i} {
+        font-size: $i * 10px;
+    }
+}
